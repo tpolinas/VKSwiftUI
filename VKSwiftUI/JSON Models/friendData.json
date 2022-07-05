@@ -1,0 +1,93 @@
+[
+    {
+        "firstName": "Elon",
+        "lastName": "Musk",
+        "city": "Los Angeles",
+        "avatarImage": "ElonMusk",
+        "id": 1001,
+        "isFeatured": true,
+        "isFavorite": true
+    },
+    {
+        "firstName": "Alex",
+        "lastName": "Lifeson",
+        "city": "Toronto",
+        "avatarImage": "AlexLifeson",
+        "id": 1002,
+        "isFeatured": true,
+        "isFavorite": true
+    },
+    {
+        "firstName": "Geddy",
+        "lastName": "Lee",
+        "city": "Toronto",
+        "avatarImage": "GeddyLee",
+        "id": 1003,
+        "isFeatured": true,
+        "isFavorite": true
+    },
+    {
+        "firstName": "Neil",
+        "lastName": "Peart",
+        "city": "Quebec",
+        "avatarImage": "NeilPeart",
+        "id": 1004,
+        "isFeatured": true,
+        "isFavorite": true
+    }, 
+    {
+        "firstName": "Polina",
+        "lastName": "Tikhomirova",
+        "city": "Moscow",
+        "avatarImage": "Me",
+        "id": 1005,
+        "isFeatured": true,
+        "isFavorite": true
+    },
+    {
+        "firstName": "Paula",
+        "lastName": "Jones",
+        "city": "New York",
+        "avatarImage": "PaulaJones",
+        "id": 1006,
+        "isFeatured": true,
+        "isFavorite": true
+    },
+    {
+        "firstName": "Margo",
+        "lastName": "Brown",
+        "city": "Ontario",
+        "avatarImage": "MargoBrown",
+        "id": 1007,
+        "isFeatured": true,
+        "isFavorite": true
+    },
+    {
+        "firstName": "Craig",
+        "lastName": "Anderson",
+        "city": "Ottawa",
+        "avatarImage": "CraigAnderson",
+        "id": 1008,
+        "isFeatured": true,
+        "isFavorite": true
+    },
+    {
+        "firstName": "Jennifer",
+        "lastName": "King",
+        "city": "Montreal",
+        "avatarImage": "JenniferKing",
+        "id": 1009,
+        "isFeatured": true,
+        "isFavorite": true
+    },
+    {
+        "firstName": "Jessica",
+        "lastName": "Taylor",
+        "city": "Vancouver",
+        "avatarImage": "JessicaTaylor",
+        "id": 1010,
+        "isFeatured": true,
+        "isFavorite": true
+    }
+]
+
