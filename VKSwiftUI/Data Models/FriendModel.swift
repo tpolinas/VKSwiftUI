@@ -12,8 +12,17 @@ struct Friend: Identifiable, Codable {
     let firstName: String
     let lastName: String
     var avatarImage: String
+    var profileImages: [String]
     var id: Int
 
+    var profilePics: [Image] {
+        var pic = [Image]()
+        for picture in 0..<profileImages.count {
+            pic.append(Image(profileImages[picture]))
+        }
+        return pic
+    }
+    
     var image: Image {
         Image(avatarImage)
     }

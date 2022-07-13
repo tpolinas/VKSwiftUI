@@ -10,11 +10,13 @@ import SwiftUI
 struct UserView: View {
     
     var body: some View {
-        NavigationView {
-            List(friends, id: \.id) { friend in
+        List(friends, id: \.id) { friend in
+            NavigationLink {
+                UserDetail(items: friends)
+            } label: {
                 UserRow(friendsImage: friend)
-            }.navigationTitle("Friends")
-        }
+            }
+        }.navigationTitle("Friends")
     }
 }
 

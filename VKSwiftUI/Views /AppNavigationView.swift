@@ -12,11 +12,18 @@ struct AppNavigationView: View {
         TabView {
             UserView()
                 .tabItem {
-                    Label("Friends", systemImage: "person.2")
+                    Label("Friends",
+                          systemImage: "person.2")
                 }
             GroupView()
                 .tabItem {
-                    Label("Groups", systemImage: "person.3")
+                    Label("Groups",
+                          systemImage: "person.3")
+                }
+            FeedView()
+                .tabItem {
+                    Label("Feed",
+                          systemImage: "newspaper")
                 }
         }
     }
