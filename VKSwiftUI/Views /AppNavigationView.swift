@@ -8,24 +8,48 @@
 import SwiftUI
 
 struct AppNavigationView: View {
+    
+    @State private var selectionView = 1
+    
+    private var navTitleName = [
+        "Friends",
+        "Groups",
+        "News"
+    ]
+    
     var body: some View {
-        TabView {
-            UserView()
-                .tabItem {
-                    Label("Friends",
-                          systemImage: "person.2")
-                }
-            GroupView()
-                .tabItem {
-                    Label("Groups",
-                          systemImage: "person.3")
-                }
-            FeedView()
-                .tabItem {
-                    Label("Feed",
-                          systemImage: "newspaper")
-                }
+        TabView(
+            selection: $selectionView
+        ) {
+            VStack {
+                FriendsView(
+                    viewModel: FriendViewModel()
+                )
+            }.tabItem {
+                Image(systemName: "person.2")
+                Text("Friends")
+            }.tag(1)
+            
+            VStack {
+                GroupsView(
+                    viewModel: GroupViewModel()
+                )
+            }.tabItem {
+                Image(systemName: "person.3")
+                Text("Groups")
+            }.tag(2)
+            
+            VStack {
+                FeedView()
+            }.tabItem {
+                Image(systemName: "newspaper")
+                Text("Feed")
+            }.tag(3)
+            
         }
+        .navigationTitle(
+            navTitleName[selectionView - 1]
+        )
     }
 }
 

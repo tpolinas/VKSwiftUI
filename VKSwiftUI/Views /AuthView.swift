@@ -13,14 +13,22 @@ struct AuthView: View {
     var body: some View {
         NavigationView {
             HStack {
-                LoginView(isUserLoggedIn: $showMainScreen)
+                LoginView(
+                    isUserLoggedIn: $showMainScreen
+                )
                 NavigationLink(
                     destination: AppNavigationView(),
                     isActive: $showMainScreen
                 ) {
                     EmptyView()
                 }
-            }
+            }.background(
+                Color(
+                    red: 0.5,
+                    green: 0.6,
+                    blue: 0.9
+                )
+            )
         }
     }
 }

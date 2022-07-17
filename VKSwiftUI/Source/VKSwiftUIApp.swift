@@ -8,10 +8,24 @@
 import SwiftUI
 
 @main
-struct VKSwiftUIApp: App {
+struct VKWithSwiftUIApp: App {
+    
+    @State private var showUserScreens = false
+    
     var body: some Scene {
         WindowGroup {
-            AuthView()
+            if showUserScreens {
+                AuthView()
+            } else {
+                VKLoginWebView()
+                    .onReceive(
+                        NotificationCenter.default.publisher(for: NSNotification.Name("vkTokenSaved"))
+                    ) { _ in
+                        print()
+                        showUserScreens = true
+                    }
+            }
         }
     }
 }
+
