@@ -31,27 +31,30 @@ struct PhotosView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            ScrollView(.horizontal) {
+            ScrollView(.vertical) {
                 LazyVGrid(columns: columns) {
                     ForEach(
                         0..<viewModel.photos.count, id: \.self
                     ) { index in
-                        KFImage(
-                            URL(string: viewModel.photos[index].imageName)
-                        )
-                            .resizable()
-                            .frame(
-                                width: size,
-                                height: size
+                        ZStack {
+                            KFImage(
+                                URL(string: viewModel.photos[index].imageName)
                             )
-                            .cornerRadius(size/10)
-                            .clipped()
+                                .resizable()
+                                .frame(
+                                    width: size,
+                                    height: size
+                                )
+                                .cornerRadius(size/10)
+                                .clipped()
+                            AnimatedLikeButton(isPressed: false)
+                        }
                     }
                 }.frame(
                     width: geometry.size.width,
                     height: geometry.size.height
                 )
-                .onAppear(perform: viewModel.fetch)
+            .onAppear(perform: viewModel.fetch)
             }
         }
     }

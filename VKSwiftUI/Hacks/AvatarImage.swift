@@ -65,3 +65,13 @@ extension View {
         )
     }
 }
+
+struct AvatarImage_Previews: PreviewProvider {
+    static var previews: some View {
+        AvatarImage {
+            KFImage(
+                URL(string: "")
+            )
+        }
+    }
+}
