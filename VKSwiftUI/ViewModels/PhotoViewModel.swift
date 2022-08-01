@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class PhotoViewModel: ObservableObject {
     
     @Published var photos: [Photo] = []

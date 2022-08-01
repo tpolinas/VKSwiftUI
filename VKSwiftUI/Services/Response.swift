@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct Response<ItemsType: Decodable>: Decodable {
     let response: Items<ItemsType>
 }

@@ -23,9 +23,22 @@ struct PhotosView: View {
         self.id = id
         self.viewModel = viewModel
         columns = [
-            GridItem(.fixed(self.size)),
-            GridItem(.fixed(self.size)),
-            GridItem(.fixed(self.size))
+            GridItem(
+                .adaptive(
+                minimum: self.size,
+                maximum: self.size
+            )
+            ),
+            GridItem(.adaptive(
+                minimum: self.size,
+                maximum: self.size
+            )
+            ),
+            GridItem(.adaptive(
+                minimum: self.size,
+                maximum: self.size
+            )
+            )
         ]
     }
     
